@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mg.dribbler.fragments.ProfileOverviewFragment"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="YOUR OVERVIEW"
+        android:textColor="@color/grey_36"
+        android:textSize="@dimen/default_text_size18" />
+
+    <!-- shadow -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_shadow_height_default"
+        android:layout_below="@+id/tv_title1"
+        android:background="@drawable/shape_header_shadow" />
+    <!-- /shadow -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        android:background="#f4f4f4"
+        android:orientation="vertical">
+
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id="@+id/radar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+    <!-- shadow -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_shadow_height_default"
+        android:layout_below="@+id/tv_title1"
+        android:background="@drawable/shape_header_shadow" />
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Best Tag"
+        android:textColor="@color/grey_36"
+        android:textSize="@dimen/default_text_size18" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="65"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:paddingTop="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp">
+    </GridView>
+</LinearLayout>

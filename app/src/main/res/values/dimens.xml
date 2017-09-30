@@ -1,0 +1,83 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tutorial_button_height">50dp</dimen>
+
+    <!-- Header Panel Size -->
+    <dimen name="header_height_huge">55dp</dimen>
+    <dimen name="header_height_large">50dp</dimen>
+    <dimen name="header_height_default">50dp</dimen>
+    <dimen name="header_height_small">40dp</dimen>
+    <dimen name="header_height_tiny">35dp</dimen>
+
+    <!-- Shadow Size -->
+    <dimen name="header_shadow_height_default">8dp</dimen>
+
+    <!-- Cell Size -->
+    <dimen name="cell_height_default">45dp</dimen>
+    <dimen name="cell_height_large">50dp</dimen>
+    <dimen name="cell_height_huge">55dp</dimen>
+    <dimen name="cell_height_small">40dp</dimen>
+    <dimen name="cell_height_tiny">35dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="default_text_size10">10sp</dimen>
+    <dimen name="default_text_size12">12sp</dimen>
+    <dimen name="default_text_size14">14sp</dimen>
+    <dimen name="default_text_size15">15sp</dimen>
+    <dimen name="default_text_size16">16sp</dimen>
+    <dimen name="default_text_size18">18sp</dimen>
+    <dimen name="default_text_size20">20sp</dimen>
+    <dimen name="default_text_size22">20sp</dimen>
+    <dimen name="default_text_size24">24sp</dimen>
+    <dimen name="default_text_size26">26sp</dimen>
+    <dimen name="default_text_size28">28sp</dimen>
+    <dimen name="default_text_size30">30sp</dimen>
+    <dimen name="default_text_size32">32sp</dimen>
+    <dimen name="default_text_size34">34sp</dimen>
+    <dimen name="default_text_size36">36sp</dimen>
+    <dimen name="default_text_size38">38sp</dimen>
+    <dimen name="default_text_size40">40sp</dimen>
+    <dimen name="default_text_size50">50sp</dimen>
+
+    <!-- Default button -->
+    <dimen name="default_height_button_large">70dp</dimen>
+    <dimen name="default_height_button_normal">50dp</dimen>
+    <dimen name="default_height_button_small">45dp</dimen>
+    <dimen name="default_height_button_tiny">40dp</dimen>
+
+    <!-- Default margin -->
+    <dimen name="default_margin_line">2dp</dimen>
+    <dimen name="default_margin_tiny">5dp</dimen>
+    <dimen name="default_margin_small">7dp</dimen>
+    <dimen name="default_margin_normal">10dp</dimen>
+    <dimen name="default_margin_medium">15dp</dimen>
+    <dimen name="default_margin_large">20dp</dimen>
+    <dimen name="default_margin_huge">25dp</dimen>
+    <dimen name="default_margin_30">30dp</dimen>
+    <dimen name="default_margin_40">40dp</dimen>
+    <dimen name="default_margin_50">50dp</dimen>
+    <dimen name="default_margin_60">60dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    // Start Activity
+    <dimen name="activity_start_btn_height">50dp</dimen>
+    <dimen name="activity_start_panel_height">180dp</dimen>
+    <dimen name="activity_start_panel_padding">30dp</dimen>
+
+    // TabBar
+    <dimen name="tab_bar_img_height">22dp</dimen>
+    <dimen name="tab_bar_img_width">26dp</dimen>
+    <dimen name="tab_bar_img_margin_bottom">4dp</dimen>
+    <dimen name="tab_bar_text_size">13sp</dimen>
+
+    // Profile Page
+    <dimen name="profile_landing_image_size">45dp</dimen>
+    <dimen name="profile_landing_box_padding">6dp</dimen>
+    <dimen name="profile_landing_medal_size">36dp</dimen>
+
+    // Progress Bar Size
+    <dimen name="progress_bar_size">40dp</dimen>
+</resources>

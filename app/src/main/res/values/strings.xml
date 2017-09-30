@@ -1,0 +1,130 @@
+<resources>
+    <!-- App Setting -->
+    <string name="app_name">Dribbler</string>
+    <string name="facebook_app_id">193880417781971</string>
+
+    <!-- UI Component Labels -->
+    <string name="title_activity_start">StartActivity</string>
+    <string name="REGISTER">REGISTER</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="login_with_facebook">LOGIN WITH FACEBOOK</string>
+    <string name="login_with_google">LOGIN WITH GOOGLE</string>
+    <string name="policy">By registering, you agree to our usage &amp; privacy policy</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="gender">gender</string>
+    <string name="birthday">birthday</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="COACH">COACH</string>
+    <string name="PREMIUM">PREMIUM</string>
+    <string name="PROFILE">PROFILE</string>
+    <string name="FEED">FEED</string>
+    <string name="BEGINNER">BEGINNER</string>
+    <string name="ADVANCED">ADVANCED</string>
+    <string name="PROFESSIONAL">PROFESSIONAL</string>
+    <string name="SKILLS_IMMEDIATELY">SKILLS IMMEDIATELY</string>
+    <string name="START_NOW_TRAINING">START NOW TRAINING</string>
+    <string name="I_want_all_advanced_tricks">I WANT ALL ADVANCED TRICKS \n 6.99\u20ac</string>
+    <string name="I_want_all_pro_tricks">I WANT ALL PROFESSIONAL TRICKS \n 6.99\u20ac</string>
+    <string name="let_us_traning">LET US TRAIN</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="send_email">Send Email</string>
+    <string name="congratulation">Congratulations,</string>
+    <string name="you_are_already_premium">You are already premium!</string>
+    <string name="switch_all_tricks_free">SWITCH ALL TRICKS FREE</string>
+    <string name="premium_success_title1">All 25 HD videos</string>
+    <string name="premium_success_title2">Learn tricks from Pros</string>
+    <string name="premium_success_title3">Complete training</string>
+    <string name="premium_advance_title1">All 65 HD videos</string>
+    <string name="premium_advance_title2">Learn tricks from Pros</string>
+    <string name="premium_advance_title3">Complete training</string>
+    <string name="now_try">Now Try</string>
+    <string name="record_your_own_video">Record your own video</string>
+    <string name="how_many_did_you_manage">How many did you manage?</string>
+    <string name="save_result">Save Result</string>
+    <string name="terms_and_service">Terms And Service</string>
+    <string name="data_protection">Data Protection</string>
+    <string name="dribble_score">Dribble Score</string>
+    <string name="overall_ranking">Overall Ranking</string>
+    <string name="videos_uploaded">Videos Uploaded</string>
+    <string name="tricks_completed">Tricks Completed</string>
+    <string name="Followers">Followers</string>
+    <string name="followers">followers</string>
+
+    <array name="Genders">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+    <array name="video_source">
+        <item>Gallery</item>
+        <item>Camera</item>
+    </array>
+
+    <!-- Error Messages -->
+    <string name="msg_err_not_enough_info">Please fill in all required fields.</string>
+    <string name="msg_err_password_not_matched">Password does not match the confirm password.</string>
+    <string name="msg_err_sign_up_fail">Unable to sign up.</string>
+    <string name="msg_err_sign_in_fail">Unable to sign in.</string>
+    <string name="msg_err_get_countries_fail">Unable to get contries.</string>
+    <string name="msg_err_forgot_password_fail">Unable to send email to reset password.</string>
+    <string name="msg_err_load_product_fail">Unable to load product list.</string>
+    <string name="msg_err_load_product_detail_fail">Unable to load product detail.</string>
+    <string name="msg_err_load_notification_fail">Unable to load notification list.</string>
+    <string name="msg_err_load_profile">Can not get user profile</string>
+    <string name="msg_err_load_report_fail">Unable to load report list.</string>
+    <string name="msg_wrong_email_and_password">Wrong email or password</string>
+    <string name="title_activity_forgot_password">Sign in</string>
+    <string name="comment">comments</string>
+    <string name="goals">goals</string>
+    <string name="empty">no</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+
+    <!-- Font -->
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="roboto_condensed">sans-serif-condensed</string>
+    <string name="roboto_thin">sans-serif-thin</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+
+    <string name="number_picker_formatter">%1d</string>
+
+    <string name="data_protection_content">By creating a Tinder account or by using the Tinder iMessage app (“Tinder Stacks”), whether through a mobile device, mobile application or computer (collectively, the “Service”) you agree to be bound by (i) these Terms of Use, (ii) our Privacy Policy and Safety Tips, each of which is incorporated by reference into this Agreement, and (iii) any terms disclosed and agreed to by you if you purchase additional features, products or services we offer on the Service (collectively, this “Agreement”). If you do not accept and agree to be bound by all of the terms of this Agreement, please do not use the Service. We may make changes to this Agreement and to the Services from time to time. We may do this for a variety of reasons including to reflect changes in or requirements of the law, new features, or changes in business practices. The most recent version of this Agreement will be posted on the Services under Settings and also on gotinder.com, and you should regularly check for the most recent version. The most recent version is the version that applies. If the changes include material changes that affect your rights or obligations, we will notify you in advance of the changes by reasonable means, which could include notification through the Services or via email. If you continue to use the Services after the changes become effective, then you agree to the revised Agreement.</string>
+    <string name="terms_and_service_content">By creating a Tinder account or by using the Tinder iMessage app (“Tinder Stacks”), whether through a mobile device, mobile application or computer (collectively, the “Service”) you agree to be bound by (i) these Terms of Use, (ii) our Privacy Policy and Safety Tips, each of which is incorporated by reference into this Agreement, and (iii) any terms disclosed and agreed to by you if you purchase additional features, products or services we offer on the Service (collectively, this “Agreement”). If you do not accept and agree to be bound by all of the terms of this Agreement, please do not use the Service. We may make changes to this Agreement and to the Services from time to time. We may do this for a variety of reasons including to reflect changes in or requirements of the law, new features, or changes in business practices. The most recent version of this Agreement will be posted on the Services under Settings and also on gotinder.com, and you should regularly check for the most recent version. The most recent version is the version that applies. If the changes include material changes that affect your rights or obligations, we will notify you in advance of the changes by reasonable means, which could include notification through the Services or via email. If you continue to use the Services after the changes become effective, then you agree to the revised Agreement.</string>
+
+    <!-- FAQ -->
+    <array name="fag_question">
+        <item>What does dribble score stand for</item>
+        <item>How to improve my dribble score</item>
+        <item>How to improve my dribble score</item>
+    </array>
+    <array name="fag_answer">
+        <item>Dribble score is mark that show how many user like your trick video. Dribble score is
+            mark that show how many user like your trick video. Dribble score is mark that show how
+            many user like your trick video.
+        </item>
+        <item>Dribble score is mark that show how many user like your trick video. Dribble score is
+            mark that show how many user like your trick video. Dribble score is mark that show how
+            many user like your trick video.
+        </item>
+        <item>Dribble score is mark that show how many user like your trick video. Dribble score is
+            mark that show how many user like your trick video. Dribble score is mark that show how
+            many user like your trick video.
+        </item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

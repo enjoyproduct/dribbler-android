@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.mg.dribbler.fragments.VideoDetailMyVideosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/panel">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_my_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_height_default"
+                android:gravity="center"
+                android:text="Your Reus Trick Videos"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size18" />
+
+            <!-- shadow -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_shadow_height_default"
+                android:layout_below="@+id/tv_my_video"
+                android:background="@drawable/shape_header_shadow" />
+            <!-- /shadow -->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_ur_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_my_video"
+                android:columnWidth="120dp"
+                android:gravity="center"
+                android:clipToPadding="true"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_height_button_normal"
+            android:background="@color/md_green_640"
+            android:text="Record"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_text_size18"
+            app:layout_widthPercent="70%"
+            android:layout_centerHorizontal="true"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

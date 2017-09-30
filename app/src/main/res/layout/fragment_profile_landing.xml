@@ -1,0 +1,373 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="com.mg.dribbler.fragments.ProfileLandingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_panel"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/black">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true">
+
+                <com.mg.dribbler.views.MyCircularImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/avatar" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_avatar"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Lionel Messi"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_settings" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="@string/followers"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_add" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_following"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/tv_follow"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="Follow"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_unfollow"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_medal"
+                    android:layout_width="@dimen/profile_landing_medal_size"
+                    android:layout_height="@dimen/profile_landing_medal_size"
+                    android:padding="5dp"
+                    android:src="@drawable/profile_medal_gray" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_panel">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@mipmap/decoration1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/profile_landing_box_padding">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/profile_landing_image_size"
+                                android:layout_height="@dimen/profile_landing_image_size"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_home" />
+
+                            <TextView
+                                android:id="@+id/tv_overall"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:text="@string/overall_ranking"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/profile_landing_box_padding">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/profile_landing_image_size"
+                                android:layout_height="@dimen/profile_landing_image_size"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_video" />
+
+                            <TextView
+                                android:id="@+id/tv_video"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:text="@string/videos_uploaded"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_score"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/ic_mark"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/dribble_score"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/profile_landing_box_padding">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/profile_landing_image_size"
+                                android:layout_height="@dimen/profile_landing_image_size"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_complete" />
+
+                            <TextView
+                                android:id="@+id/tv_complete"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:text="@string/tricks_completed"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/profile_landing_box_padding">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/profile_landing_image_size"
+                                android:layout_height="@dimen/profile_landing_image_size"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_follower" />
+
+                            <TextView
+                                android:id="@+id/tv_follower"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:text="@string/followers"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/pl_panel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/rl_score">
+
+            <Button
+                android:id="@+id/btn_try"
+                android:layout_height="@dimen/default_height_button_small"
+                android:layout_centerHorizontal="true"
+                android:background="@color/md_green_700"
+                android:text="@string/now_try"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_text_size18"
+                android:layout_centerInParent="true"
+                app:layout_widthPercent="60%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pl_panel">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp"></android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

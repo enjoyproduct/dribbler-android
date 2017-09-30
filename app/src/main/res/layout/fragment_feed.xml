@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mg.dribbler.fragments.FeedFragment">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabBackground="@drawable/tab_background"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white">
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_below="@+id/tab_bar"
+        android:iconifiedByDefault="false"
+        android:queryHint="search users"
+        android:background="@drawable/shape_search_round"
+        app:queryBackground="@android:color/transparent"
+        android:layout_margin="5dp"
+        >
+
+    </android.support.v7.widget.SearchView>
+    <LinearLayout
+        android:id="@+id/ll_feed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_view"
+        android:orientation="vertical">
+
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/activity_main_swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progress_bar_size"
+        android:layout_height="@dimen/progress_bar_size"
+        android:progressDrawable="@drawable/progress_bar_background"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

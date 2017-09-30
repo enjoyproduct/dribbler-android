@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_height_large"
+        android:background="@color/transparent_AA">
+
+        <com.mg.dribbler.views.MyCircularImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="15dip"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/avatar" />
+
+        <TextView
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="Lionel Messi"
+            android:layout_marginLeft="10dip"
+            android:textSize="@dimen/default_text_size16" />
+
+        <!--<br.com.simplepass.loading_button_lib.customViews.CircularProgressButton-->
+            <!--android:id="@+id/btn_unfollow"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:text="unfollow"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@drawable/shape_unfollow"-->
+            <!--app:spinning_bar_width="2dp"-->
+            <!--app:spinning_bar_color="#FFF"-->
+            <!--app:spinning_bar_padding="6dp" />-->
+        <Button
+            android:id="@+id/btn_unfollow"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:text="unfollow"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_unfollow"
+            />
+    </RelativeLayout>
+</LinearLayout>

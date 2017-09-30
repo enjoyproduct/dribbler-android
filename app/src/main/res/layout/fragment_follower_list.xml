@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mg.dribbler.fragments.FollowerListFragment"
+    android:background="@color/transparent_EE">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/btn_following"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="I follow"
+            android:textAllCaps="false"
+            android:background="@color/gray_dark"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn_follower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="My Follower"
+            android:textAllCaps="false"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_container">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progress_bar_size"
+        android:layout_height="@dimen/progress_bar_size"
+        android:progressDrawable="@drawable/progress_bar_background"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

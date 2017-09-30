@@ -1,0 +1,396 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mg.dribbler.fragments.ProfileSettingFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="SETTING"
+            android:textColor="@color/grey_36"
+            android:textSize="@dimen/default_text_size18" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <com.mg.dribbler.views.MyCircularImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/avatar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/border_default" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_personal_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="Personal Info"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_next" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/border_default" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_followr_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="User List"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_next" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/border_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="Help &amp; Support"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_next" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/border_default" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_terms"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="Terms &amp; Conditions"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_next" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/border_default" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_data_protection"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="Data Protection"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_next" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/border_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="Push Notification"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <Switch
+                            android:id="@+id/sw_push"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/border_default" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="Connect with Facebook"
+                                android:textSize="@dimen/default_text_size16" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@mipmap/fb" />
+                        </LinearLayout>
+
+                        <Switch
+                            android:id="@+id/sw_fb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/border_default" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="Connnect with Google"
+                                android:textSize="@dimen/default_text_size16" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:src="@mipmap/google" />
+
+                        </LinearLayout>
+
+                        <Switch
+                            android:id="@+id/sw_gplus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/border_default" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:text="High Quality Videos"
+                            android:textSize="@dimen/default_text_size16" />
+
+                        <Switch
+                            android:id="@+id/sw_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/border_default" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/cell_height_default"
+                            android:gravity="center"
+                            android:text="Log out"
+                            android:textAlignment="center"
+                            android:textColor="@color/icon_dislike"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/border_default" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_delete_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_height_default">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/cell_height_default"
+                            android:gravity="center"
+                            android:text="Delete Profile"
+                            android:textAlignment="center"
+                            android:textColor="@color/icon_dislike"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/border_default" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+    </FrameLayout>
+</RelativeLayout>

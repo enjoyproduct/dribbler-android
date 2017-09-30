@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mg.dribbler.fragments.VideoDetailOtherVideosFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_best_user_video"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height_default"
+            android:gravity="center"
+            android:text="Your Reus Trick Videos"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size18" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_shadow_height_default"
+            android:layout_below="@+id/tv_best_user_video"
+            android:background="@drawable/shape_header_shadow" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_user_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_best_user_video"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>

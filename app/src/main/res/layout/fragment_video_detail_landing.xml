@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mg.dribbler.fragments.VideoDetailLandingFragment">
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_picture"
+            android:background="@color/black"
+            app:layout_aspectRatio="100%"
+            app:layout_widthPercent="100%">
+
+            <ImageView
+                android:id="@+id/iv_thumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_trick_title_background"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Ultra Best Soccer Skills"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_play"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent_33">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:padding="35dp"
+                    android:src="@mipmap/icon_play" />
+            </RelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_alignLeft="@+id/btn_try"
+            android:layout_above="@+id/btn_try"
+            android:text="@string/record_your_own_video"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_try"
+            android:layout_height="@dimen/default_height_button_normal"
+            android:layout_centerHorizontal="true"
+            android:background="@color/md_red_750"
+            android:text="@string/now_try"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_text_size18"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            app:layout_widthPercent="70%" />
+
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

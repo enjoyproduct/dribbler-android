@@ -1,0 +1,3 @@
+include ':app', ':volleylibrary', ':SectorProgressView'
+project(':volleylibrary').projectDir = new File('vendors/volleylibrary')
+project(':SectorProgressView').projectDir = new File('vendors/SectorProgressView')

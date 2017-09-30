@@ -1,0 +1,138 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivTop"
+        android:src="@mipmap/tutorial3"
+        app:layout_aspectRatio="100%"
+        app:layout_widthPercent="100%" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        android:layout_above="@+id/btn_skill"
+        android:layout_below="@+id/ivTop">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivTop"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/rect1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/md_green_650"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/rect1"
+                    android:text="65 HD Videos"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/rect2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/md_green_650"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/rect2"
+                    android:text="65 HD Videos"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/rect3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/md_green_650"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/rect3"
+                    android:text="65 HD Videos"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/rect4"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/md_green_650"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/rect4"
+                    android:text="65 HD Videos"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_skill"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tutorial_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/md_green_650"
+        android:text="@string/SKILLS_IMMEDIATELY"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</android.support.percent.PercentRelativeLayout>

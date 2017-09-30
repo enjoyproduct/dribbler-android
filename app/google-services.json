@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "903068839543",
+    "project_id": "dribbler-6af58"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903068839543:android:058440958d98416e",
+        "android_client_info": {
+          "package_name": "com.mg.dribbler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903068839543-m453phf062b9ruslebit8bdjpq8i7uq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mg.dribbler",
+            "certificate_hash": "db3374183011357cf408bb0586d9792a33b4e350"
+          }
+        },
+        {
+          "client_id": "903068839543-7q7gabkr04ekgs362jugink8ftvrtam7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG-Q1XMY_c7xzIhJhV2X7e3odOkyc7uQs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,163 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_picture"
+        android:background="@mipmap/upgrade_background"
+        app:layout_aspectRatio="137%"
+        app:layout_widthPercent="100%">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="40%"
+            app:layout_marginTopPercent="10%">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/switch_all_tricks_free"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_title">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_check_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/premium_success_title1"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_check_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/premium_success_title2"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_check_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/premium_success_title3"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_below="@+id/rl_picture"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_check_green_round"
+        app:layout_aspectRatio="100%"
+        app:layout_marginTopPercent="4%"
+        app:layout_widthPercent="25%" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_train"
+        android:layout_below="@+id/iv_check">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/congratulation"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/you_are_already_premium"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_train"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/orange_premium_success"
+        android:text="@string/let_us_traning"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_widthPercent="80%" />
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_left"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@color/blue_soft">
+
+            <ImageView
+                android:id="@+id/iv_thumb"
+                android:layout_width="120dp"
+                android:layout_height="120dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_play" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/rl_left">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/recycler_view_tag"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="HOP THE WORLD HOP THE WORLD"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_tag"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

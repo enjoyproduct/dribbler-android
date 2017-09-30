@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_photo_panel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp">
+
+            <com.mg.dribbler.views.MyCircularImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/avatar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_avatar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lionel Messi"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size12" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 mins ago"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size10" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/pl_play"
+            android:layout_below="@+id/rl_photo_panel"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black"
+            app:layout_aspectRatio="177%"
+            app:layout_widthPercent="100%">
+
+            <VideoView
+                android:id="@+id/video_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foregroundGravity="center"
+                android:layout_centerHorizontal="true"
+                android:background="@color/black" />
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin"
+                style="@style/SpinKitView.Large.FadingCircle"
+                android:layout_gravity="center"
+                app:SpinKit_Color="#ddffffff" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="121dp"
+            android:layout_below="@+id/pl_play"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pl_play"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/pl_play">
+
+                <LinearLayout
+                    android:id="@+id/llTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbarSize="1dp"
+                        android:scrollbarStyle="outsideInset"
+                        android:scrollbars="horizontal" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_comment"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@+id/rl_recycler"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#1f1f1f" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_goals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/ll_avatar_panel"
+                        android:background="@drawable/shape_goal_round"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp">
+
+                        <TextView
+                            android:id="@+id/tv_goals"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="+0 goals"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="7dp"
+                        android:text="0 comments"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#1f1f1f" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_button_panel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/ll_comment"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.like.LikeButton
+                        android:id="@+id/btn_rate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        app:icon_size="23dp"
+                        app:circle_start_color="@color/colorAccent"
+                        app:circle_end_color="@color/colorAccent"
+                        app:dots_primary_color="@color/colorAccent"
+                        app:dots_secondary_color="@color/colorAccent"
+                        app:like_drawable="@mipmap/ic_ball_star"
+                        app:unlike_drawable="@mipmap/ic_ball_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="#1f1f1f" />
+
+                    <RelativeLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_comment"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:padding="8dp"
+                            android:layout_marginTop="2dp"
+                            android:src="@mipmap/ic_bubble" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="#1f1f1f" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_share"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:padding="9dp"
+                        android:src="@mipmap/ic_share"
+                        android:tint="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/ll_button_panel"
+                android:background="#1f1f1f" />
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

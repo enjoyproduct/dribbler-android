@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height_default"
+            android:gravity="center"
+            android:text="AVERAGE PER 10 ATTEMPTS"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <!-- shadow -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_shadow_height_default"
+            android:layout_below="@+id/tv_title1"
+            android:background="@drawable/shape_header_shadow" />
+        <!-- /shadow -->
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_title1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_default"
+                android:text="7.8 / 10"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"/>
+            <com.timqi.sectorprogressview.ColorfulRingProgressView
+                android:id="@+id/pie_chart"
+                app:layout_heightPercent="100%"
+                android:layout_centerInParent="true"
+                app:bgColor="#e1e1e1"
+                app:fgColorStart="#055b17"
+                app:fgColorEnd="#7ccd80"
+                app:layout_aspectRatio="100%"
+                app:percent="75"
+                app:startAngle="0"
+                app:strokeWidth="25dp" />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="45">
+
+        <TextView
+            android:id="@+id/tv_title2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height_default"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="TIME LINE PER 10 ATTEMPTS"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <!-- shadow -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_shadow_height_default"
+            android:layout_below="@+id/tv_title2"
+            android:background="@drawable/shape_header_shadow" />
+        <!-- /shadow -->
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_title2"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+</LinearLayout>

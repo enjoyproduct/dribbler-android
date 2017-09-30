@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mg.dribbler.fragments.VideoDetailLandingFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_default"
+        android:text="Reus Trick"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_shadow_height_default"
+        android:layout_below="@+id/tv_title"
+        android:background="@drawable/shape_header_shadow" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/pl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/arrow"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1px"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadeScrollbars="true"
+            android:listSelector="@android:color/transparent"></ListView>
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_above="@+id/tv_record"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_down_arrow"/>
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_alignLeft="@+id/btn_try"
+            android:layout_above="@+id/btn_try"
+            android:text="@string/record_your_own_video"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_try"
+            android:layout_height="@dimen/default_height_button_normal"
+            android:layout_centerHorizontal="true"
+            android:background="@color/md_red_750"
+            android:text="@string/now_try"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_text_size18"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            app:layout_widthPercent="60%" />
+
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

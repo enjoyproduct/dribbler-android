@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_panel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.mg.dribbler.views.MyCircularImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lionel Messi"
+                android:textColor="@color/text_color_default"
+                android:textSize="@dimen/default_text_size12" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 mins ago"
+                android:textColor="@color/text_color_default"
+                android:textSize="@dimen/default_text_size10" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="President Trump's director of social media on Tuesday said that he will release former Democratic presidential nominee Hillary Clinton's concession phone call that was made after her defeat in the 2016 presidential election. To celebrate the six-month mark after the election, Dan Scavino tweeted a screen grab of Trump then-campaign manager Kellyanne Conway's phone, which shows a phone call that was made by Clinton aide Huma Abedin at 2:30 in the morning on Nov. 9."
+            android:textColor="@color/text_color_default"
+            android:textSize="@dimen/default_text_size12" />
+    </LinearLayout>
+</LinearLayout>
+
+<!--<RelativeLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="40dp"-->
+<!--android:layout_marginLeft="55dp"-->
+<!--android:layout_marginRight="10dp">-->
+
+<!--<LinearLayout-->
+    <!--android:id="@+id/ll_like"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true">-->
+    <!--<ImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:src="@mipmap/ic_ball" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_likes"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:text="+80 goals"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:paddingRight="5dp"-->
+        <!--android:paddingTop="2dp"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/default_text_size10"-->
+        <!--android:background="@drawable/shape_goal_round"/>-->
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+    <!--android:id="@+id/ll_comment"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true">-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:src="@mipmap/ic_bubble" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_comments"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="22 Comments"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:textSize="@dimen/default_text_size12"-->
+        <!--android:textColor="@color/text_color_default"/>-->
+<!--</LinearLayout>-->
+<!--</RelativeLayout>-->
