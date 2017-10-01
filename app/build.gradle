@@ -66,6 +66,7 @@ dependencies {
     compile 'com.github.ybq:Android-SpinKit:1.1.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/httpcore-4.2.5.jar')
+    compile 'com.android.support:multidex:1.0.1'
 }
 
 apply plugin: 'com.google.gms.google-services'
