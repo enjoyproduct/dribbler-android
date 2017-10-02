@@ -15,6 +15,8 @@ public class DribblerApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // Handle Exception
+        Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
         mInstance = this;
         // Initialize the SDK before executing any other operations,
         MultiDex.install(this);

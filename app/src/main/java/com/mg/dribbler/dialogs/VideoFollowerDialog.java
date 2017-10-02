@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -69,13 +70,13 @@ public class VideoFollowerDialog extends Dialog {
 
             public TextView tvName ;
             public MyCircularImageView ivAvatar;
-            public CircularProgressButton button;
+            public Button button;
 
             public MyViewHolder(View view) {
                 super(view);
                 tvName = (TextView) findViewById(R.id.tv_name);
                 ivAvatar = (MyCircularImageView) view.findViewById(R.id.iv_avatar);
-                button = (CircularProgressButton) view.findViewById(R.id.btn_unfollow);
+                button = (Button) view.findViewById(R.id.btn_unfollow);
             }
         }
 

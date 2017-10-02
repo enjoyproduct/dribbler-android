@@ -56,8 +56,7 @@ public class StartActivity extends BaseActivity implements GoogleApiClient.OnCon
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        // Handle Exception
-        Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
+
 
         // Check Previous Login Status and Login
         String loginStatus = SharedPrefUtil.loadString(StartActivity.this, AppConstant.PREF_LOGIN_TYPE, "None");

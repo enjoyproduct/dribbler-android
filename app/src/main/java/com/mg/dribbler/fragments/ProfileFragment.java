@@ -63,17 +63,10 @@ public class ProfileFragment extends Fragment {
     /**
      * Life Cycle
      */
-    @SuppressLint("ValidFragment")
-    public ProfileFragment(User user) {
-        isMyProfile = false;
-        this.user = user;
-        initVariables();
-    }
+
 
     public ProfileFragment() {
-        isMyProfile = true;
-        this.user = User.currentUser();
-        initVariables();
+
     }
     void initVariables() {
         myVideos = new ArrayList<>();
@@ -100,6 +93,10 @@ public class ProfileFragment extends Fragment {
         contentView = inflater.inflate(R.layout.fragment_profile, container, false);
         fragmentManager = getFragmentManager();
 
+        isMyProfile = getArguments().getBoolean("is_me");
+        this.user = (User)getArguments().getSerializable("user");
+        initVariables();
+
         // Instantiate View Pager
         mPager = (ViewPager) contentView.findViewById(R.id.vertical_viewpager);
         mPagerAdapter = new ProfileFragment.ScreenSlidePagerAdapter(getChildFragmentManager());
@@ -114,7 +111,10 @@ public class ProfileFragment extends Fragment {
      *
      */
     public void goToFollowerPage(User user) {
-        FollowerListFragment fragment = new FollowerListFragment(user);
+        FollowerListFragment fragment = new FollowerListFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user", user);
+        fragment.setArguments(bundle);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
         transaction.addToBackStack(fragment.toString());

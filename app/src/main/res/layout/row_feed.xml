@@ -116,7 +116,7 @@
                     android:paddingRight="5dp">
 
                     <RelativeLayout
-                        android:layout_toRightOf="@+id/ll_avatar_panel"
+
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"

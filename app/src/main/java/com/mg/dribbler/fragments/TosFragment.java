@@ -24,8 +24,8 @@ public class TosFragment extends Fragment {
     private TextView mContent;
     private int index;
 
-    public TosFragment(int index) {
-        this.index = index;
+    public TosFragment() {
+
     }
 
 
@@ -34,6 +34,8 @@ public class TosFragment extends Fragment {
         contentView = inflater.inflate(R.layout.fragment_tos, container, false);
         mTitle = (TextView) contentView.findViewById(R.id.tv_title);
         mContent = (TextView) contentView.findViewById(R.id.tv_content);
+
+        this.index = getArguments().getInt("index");
 
         switch (index) {
             case 0: // Terms & Conditions

@@ -250,7 +250,11 @@ public class ProfileSettingFragment extends Fragment implements GoogleApiClient.
     }
 
     public void onUserList() {
-        UserListFragment fragment = new UserListFragment(User.currentUser());
+        UserListFragment fragment = new UserListFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user", User.currentUser());
+        fragment.setArguments(bundle);
+
         pushFragment(fragment);
     }
 
@@ -260,12 +264,18 @@ public class ProfileSettingFragment extends Fragment implements GoogleApiClient.
     }
 
     public void onTermsAndService() {
-        TosFragment fragment = new TosFragment(0);
+        TosFragment fragment = new TosFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("index", 0);
+        fragment.setArguments(bundle);
         pushFragment(fragment);
     }
 
     public void onDataProtection() {
-        TosFragment fragment = new TosFragment(1);
+        TosFragment fragment = new TosFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("index", 1);
+        fragment.setArguments(bundle);
         pushFragment(fragment);
     }
 

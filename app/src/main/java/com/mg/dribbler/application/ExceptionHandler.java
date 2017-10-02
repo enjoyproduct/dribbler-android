@@ -1,6 +1,7 @@
 package com.mg.dribbler.application;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
@@ -11,10 +12,10 @@ import java.io.StringWriter;
 
 public class ExceptionHandler implements
         Thread.UncaughtExceptionHandler {
-    private final Activity myContext;
+    private final Context myContext;
     private final String LINE_SEPARATOR = "\n";
 
-    public ExceptionHandler(Activity context) {
+    public ExceptionHandler(Context context) {
         myContext = context;
     }
 

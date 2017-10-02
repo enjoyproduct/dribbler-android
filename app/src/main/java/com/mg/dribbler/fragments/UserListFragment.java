@@ -56,10 +56,7 @@ public class UserListFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public UserListFragment(User user) {
-        // Required empty public constructor
-        this.user = user;
-    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,6 +64,8 @@ public class UserListFragment extends Fragment {
         // Inflate the layout for this fragment
         contentView = inflater.inflate(R.layout.fragment_user_list, container, false);
         mActivity = (MainActivity) getActivity();
+
+        this.user = (User)getArguments().getSerializable("user");
 
         // Instantiate Progress Bar
         progressBar = (ProgressBar) contentView.findViewById(R.id.progressBar);

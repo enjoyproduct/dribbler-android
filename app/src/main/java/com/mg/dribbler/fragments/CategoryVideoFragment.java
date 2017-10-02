@@ -64,9 +64,10 @@ public class CategoryVideoFragment extends Fragment {
     /**
      * Life Cycle
      */
-    public CategoryVideoFragment(Category category) {
-        mCategory = category;
+    public CategoryVideoFragment() {
+
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,7 @@ public class CategoryVideoFragment extends Fragment {
         mActivity = (MainActivity) getActivity();
         fragmentManager = getFragmentManager();
 
+        mCategory = (Category) getArguments().getSerializable("category");
         // Initialize ListView
         listView = (ListView) contentView.findViewById(R.id.listView);
 

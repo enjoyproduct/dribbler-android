@@ -189,6 +189,11 @@ public class MainActivity extends AppCompatActivity {
         mCategoryFragment = new CategoryFragment();
         mPremiumFragment = new PremiumFragment();
         mProfileFragment = new ProfileFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user", User.currentUser());
+        bundle.putBoolean("is_me", true);
+        mProfileFragment.setArguments(bundle);
+
         mFeedFragment = new FeedFragment();
 
         // Instantiate fragment manager
@@ -290,7 +295,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToOtherUserProfilePage(User user) {
-        ProfileFragment fragment = new ProfileFragment(user);
+        ProfileFragment fragment = new ProfileFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user", user);
+        bundle.putBoolean("is_me", false);
+        fragment.setArguments(bundle);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
         transaction.addToBackStack(fragment.toString());
@@ -298,7 +307,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToCategoryVideo(Category category) {
-        Fragment fragment = new CategoryVideoFragment(category);
+        Fragment fragment = new CategoryVideoFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("category", category);
+        fragment.setArguments(bundle);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
         transaction.addToBackStack(fragment.toString());

@@ -62,8 +62,8 @@ public class FollowerListFragment extends Fragment {
     boolean isFollowing = true;
 
     @SuppressLint("ValidFragment")
-    public FollowerListFragment(User user) {
-        this.user = user;
+    public FollowerListFragment() {
+
     }
 
     @Override
@@ -75,6 +75,8 @@ public class FollowerListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         contentView = inflater.inflate(R.layout.fragment_follower_list, container, false);
         mActivity = (MainActivity) getActivity();
+
+        user = (User)getArguments().getSerializable("user");
 
         // Instantiate Progress Bar
         progressBar = (ProgressBar) contentView.findViewById(R.id.progressBar);
