@@ -73,11 +73,7 @@ public class VideoDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = (MainActivity) getActivity();
-        // Load Trick Data
-        loadMyTrickStatistics();
-        loadMyTrickVideo();
-        loadOtherTrickVideo();
-        loadBestUserOfTrick();
+
     }
 
     @Override
@@ -91,6 +87,12 @@ public class VideoDetailFragment extends Fragment {
         mIndicator = (CircleIndicator) contentView.findViewById(R.id.indicator);
         mPager.setAdapter(mPagerAdapter);
         mIndicator.setViewPager(mPager);
+
+        // Load Trick Data
+        loadMyTrickStatistics();
+        loadMyTrickVideo();
+        loadOtherTrickVideo();
+        loadBestUserOfTrick();
 
         return contentView;
     }

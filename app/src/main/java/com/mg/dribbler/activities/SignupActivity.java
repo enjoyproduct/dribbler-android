@@ -169,7 +169,7 @@ public class SignupActivity extends AppCompatActivity {
                 if (User.currentUser().isVerified) {
                     goMainActivity();
                 } else {
-                    UIUtil.showAlertDialog(SignupActivity.this, "Welcome", "We have sent email to verify your email. After verify email, log in the app.", "OK", new MaterialDialog.SingleButtonCallback() {
+                    UIUtil.showAlertDialog(SignupActivity.this, "Welcome", "We have sent email to verify your email. Please input verify code in login. Thanks", "OK", new MaterialDialog.SingleButtonCallback() {
                         @Override
                         public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
                             finish();

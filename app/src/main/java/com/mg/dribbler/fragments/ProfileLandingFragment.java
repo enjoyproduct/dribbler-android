@@ -89,6 +89,13 @@ public class ProfileLandingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        contentView = inflater.inflate(R.layout.fragment_profile_landing, container, false);
+
         mActivity = (MainActivity) getActivity();
         parentFragment = (ProfileFragment) getParentFragment();
         fragmentManager = getFragmentManager();
@@ -98,11 +105,6 @@ public class ProfileLandingFragment extends Fragment {
         } else {
             LocalBroadcastManager.getInstance(mActivity).registerReceiver(mBroadcastReceiver, new IntentFilter(AppConstant.BROADCAST_GET_OTHER_VIDEOS));
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        contentView = inflater.inflate(R.layout.fragment_profile_landing, container, false);
 
         // Setting Page
         LinearLayout llSetting = (LinearLayout) contentView.findViewById(R.id.ll_setting);

@@ -89,7 +89,11 @@ public class SigninAcitivity extends AppCompatActivity {
                 super.onFailure(statusCode, headers, throwable, errorResponse);
                 UIUtil.dismissProgressDialog(SigninAcitivity.this);
                 String error = WebServiceManager.getErrorMesssage(errorResponse);
-                UIUtil.showAlertDialog(SigninAcitivity.this, error, "", "OK");
+                if (statusCode == 401) {//user is not verified yet
+                    inputVerifyCode();
+                } else {
+                    UIUtil.showAlertDialog(SigninAcitivity.this, error, "", "OK");
+                }
             }
 
             @Override
@@ -98,6 +102,8 @@ public class SigninAcitivity extends AppCompatActivity {
                 UIUtil.dismissProgressDialog(SigninAcitivity.this);
                 if (statusCode == 401) {//user is not verified yet
                     inputVerifyCode();
+                } else {
+                    UIUtil.showAlertDialog(SigninAcitivity.this, responseString, "", "OK");
                 }
             }
         });
@@ -126,9 +132,10 @@ public class SigninAcitivity extends AppCompatActivity {
 
     void inputVerifyCode() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Please insert verify code");
+        builder.setTitle("Please input verify code.");
+        builder.setMessage("We've sent code to your email");
         final EditText input = new EditText(this);
-        input.setInputType(InputType.TYPE_TEXT_VARIATION_NORMAL);
+        input.setInputType(InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE);
         builder.setView(input);
         builder.setPositiveButton("Verify", new DialogInterface.OnClickListener() {
             @Override

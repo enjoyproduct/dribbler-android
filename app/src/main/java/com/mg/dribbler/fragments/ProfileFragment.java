@@ -77,21 +77,16 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mActivity = (MainActivity) getActivity();
 
-        // load profile data if user is not mine
-//        if (!isMyProfile) {
-//            loadVideos();
-//            loadProfileStatus();
-//        }
-        loadVideos();
-        loadProfileStatus();
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         contentView = inflater.inflate(R.layout.fragment_profile, container, false);
         fragmentManager = getFragmentManager();
+        mActivity = (MainActivity) getActivity();
 
         isMyProfile = getArguments().getBoolean("is_me");
         this.user = (User)getArguments().getSerializable("user");
@@ -104,6 +99,13 @@ public class ProfileFragment extends Fragment {
         mPager.setAdapter(mPagerAdapter);
         mIndicator.setViewPager(mPager);
 
+        // load profile data if user is not mine
+//        if (!isMyProfile) {
+//            loadVideos();
+//            loadProfileStatus();
+//        }
+        loadVideos();
+        loadProfileStatus();
         return contentView;
     }
 
