@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rlProfessional"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     android:layout_weight="1"
     android:background="@color/md_grey_400"
     android:paddingBottom="1px">
@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/iv_thumb"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scaleType="fitXY"
         android:src="@mipmap/category_2" />
 

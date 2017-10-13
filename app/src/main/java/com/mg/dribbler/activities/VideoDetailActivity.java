@@ -244,16 +244,28 @@ public class VideoDetailActivity extends Activity {
     /**
      * Share Methods
      */
+//    private void share() {
+//        // Create the share Intent
+//        String shareText = "";
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_SEND);
+//        intent.setType("text/plain");
+//        intent.putExtra(Intent.EXTRA_TEXT, video.hd_url);
+//        startActivity(Intent.createChooser(intent, "Share"));
+//
+//
+//    }
     private void share() {
         // Create the share Intent
-        String shareText = "";
+//        String shareText = "https://dribbler.com/videos?video_id=" + String.valueOf(video.video_id);
+        String shareText = "http://52.57.120.88/deeplink?video_id=" + String.valueOf(video.video_id);
+
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, video.hd_url);
+        intent.putExtra(Intent.EXTRA_TEXT, shareText);
         startActivity(Intent.createChooser(intent, "Share"));
     }
-
     /**
      * Load Video Information
      */

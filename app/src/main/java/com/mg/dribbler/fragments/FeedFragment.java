@@ -279,7 +279,13 @@ public class FeedFragment extends Fragment {
                 final MyViewHolder myViewHolder = (MyViewHolder) holder;
 
                 myViewHolder.tvName.setText(video.user.getFullName());
-                String ago = new TimeAgo().timeAgo(TimeUtility.getLocalDateFromUTCString(video.created_at));
+                String ago = "";
+                if (video.created_at == "null" || video.created_at.isEmpty()) {
+                    ago = "";
+                } else {
+                    ago = new TimeAgo().timeAgo(TimeUtility.getLocalDateFromUTCString(video.created_at));
+                }
+
                 myViewHolder.tvTimeAgo.setText(ago);
                 Glide.with(mActivity).load(video.user.photoURL).into(myViewHolder.ivAvatar);
                 Glide.with(mActivity).load(video.thumbnail).into(myViewHolder.ivThumb);

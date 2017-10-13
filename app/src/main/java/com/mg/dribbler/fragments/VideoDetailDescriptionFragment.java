@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -267,7 +268,7 @@ public class VideoDetailDescriptionFragment extends Fragment {
             ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
             Glide.with(mActivity).load(description.thumbnail).into(imageView);
             TextView tvDescription = (TextView) convertView.findViewById(R.id.tv_description);
-            tvDescription.setText(description.description);
+            tvDescription.setText(Html.fromHtml(description.description));
 
             return convertView;
         }

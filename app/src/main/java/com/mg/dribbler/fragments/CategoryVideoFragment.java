@@ -322,7 +322,9 @@ public class CategoryVideoFragment extends Fragment {
                         mFilterTagArray = new ArrayList<>();
                         isApplyFilter = true;
                     }
-
+                    if (tag.isEmpty()) {
+                        return;
+                    }
                     mFilterTagArray = Tag.appendWithoutDuplication(mFilterTagArray, Tag.fetchTagWithName(Global.sharedInstance().tagArr, tag));
                     fetchWithSelectedTags();
                 }
