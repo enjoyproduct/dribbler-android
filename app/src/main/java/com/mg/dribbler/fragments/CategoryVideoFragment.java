@@ -108,7 +108,8 @@ public class CategoryVideoFragment extends Fragment {
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
                 UIUtil.dismissProgressDialog(mActivity);
-                mFilterTrickArray = ParseServiceManager.parseTrickResponse(response);
+                mCategory.tricks = ParseServiceManager.parseTrickResponse(response);
+                mFilterTrickArray.addAll(mCategory.tricks);
                 categoryVideoAdapter.notifyDataSetChanged();
             }
         });

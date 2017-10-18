@@ -84,10 +84,20 @@ public class CategoryFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Category category = categoryArr.get(position);
-                if (!category.premium || category.unlocked) {
-                    ((MainActivity)mActivity).goToCategoryVideo(category);
+                if (category.category_title.equals("ADVANCED") || category.category_title.equals("PROFESSIONAL")) {
+                    if (!category.premium || category.unlocked) {
+                        ((MainActivity)mActivity).goToCategoryVideo(category);
+                    } else {
+                        ((MainActivity)mActivity).showUpgradePage();
+                    }
+
                 } else {
-                    ((MainActivity)mActivity).showUpgradePage();
+                    if (!category.premium || category.unlocked) {
+                        ((MainActivity)mActivity).goToCategoryVideo(category);
+                    } else {
+                        ((MainActivity)mActivity).showUnlockPopup(category);
+                    }
+
                 }
             }
         });
@@ -139,6 +149,7 @@ public class CategoryFragment extends Fragment {
 
             view.setTag(category);
             ImageView imgView = (ImageView) view.findViewById(R.id.iv_thumb);
+//            Glide.with(mActivity).load(category.thumbnail_url).into(imgView);
             UrlRectangleImageViewHelper.setUrlDrawable(imgView,category.thumbnail_url, R.drawable.tab_background_unselected, new UrlImageViewCallback() {
                 @Override
                 public void onLoaded(ImageView imageView, Bitmap loadedBitmap, String url, boolean loadedFromCache) {

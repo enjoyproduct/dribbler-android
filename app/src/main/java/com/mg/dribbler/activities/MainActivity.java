@@ -2,7 +2,9 @@ package com.mg.dribbler.activities;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -71,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        PermissionUtil.checkPermissions(this);
+
         APIServiceManager.getMyVideos(this);
         APIServiceManager.getProfileStatus(this, new JsonHttpResponseHandler());
 
@@ -293,7 +298,27 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.container, mPremiumFragment);
         transaction.commit();
     }
-
+    public void showUnlockPopup(Category category) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Dribbler");
+        builder.setMessage("Please purchase for 4,99€");
+        builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+    }
     public void goToOtherUserProfilePage(User user) {
         ProfileFragment fragment = new ProfileFragment();
         Bundle bundle = new Bundle();
